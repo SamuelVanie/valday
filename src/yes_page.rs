@@ -9,6 +9,10 @@ pub fn yes_page() -> Html {
         <div class="reasons">
             <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExazJ4c2Qyc2tzbzFmMmh5anU4b3Z6M20zZTB5c2U0N24xeDVieDJzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UgNxy98zEpDiM/giphy.gif" alt="Cute GIF" />
         <p class="etre">{ "Yaaaaaay" }</p>
+        <p class="etre">{ "Est-ce qu'il doit y avoir une raison d'aimer?" }</p>
+        <p class="etre">{ "Je t'aime pour tout et pour rien" }</p>
+        <p class="etre">{ "Je t'aime parce que tu es toi" }</p>
+        <p class="etre">{ "Si t'es là c'est que c'est un oui, à confirmer par message wha au +225 0769237858" }</p>
         <Link<Route> to={Route::Reasons}>
         <button class="fancy-button home">
                 <span></span>
