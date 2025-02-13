@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+:root {
+  --icon-scale: 0;
+  --icon-rotation: 0;
+  --icon-opacity: 0;
+  --color-pale-pink: hsl(340, 80%, 70%);
+  --color-dark-purple: hsl(269.35 100% 21%);
+  --color-light-purple: hsl(269.99 100% 40%);
+  --color-bubblegum-pink: hsl(300deg 97% 68%);
+}
+
+@supports (color: color(display-p3 0 0 0)) {
+  :root {
+    --color-pale-pink: color(display-p3 0.9 0.4 0.6);
+    --color-dark-purple: color(display-p3 0.19 0.01 0.41);
+    --color-light-purple: color(display-p3 0.37 0.01 0.78);
+    --color-bubblegum-pink: color(display-p3 0.94 0.36 1);
+  }
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Italianno", cursive;
+}
+
+body {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #ff42ae, #f62681);
+  font-size: 1.5rem;
+}
+
+main {
+  text-align: center;
+}
+
+.reason-container {
+  display: flex;
+  color: black;
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Horizontally align items */
+  margin: 20px auto; /* Add margin around the container */
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif {
+  width: 35%;
+}
+
+.card {
+  width: 435px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.card.bg-secondary.two {
+  box-shadow: -0.2em -0.125em 0.125em rgba(0, 0, 0, 0.25), 0 0 0 0.04em rgba(0, 0, 0, 0.3), 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4) inset, -0.05em -0.05em 0.02em rgba(255, 255, 255, 0.8) inset !important;
+  background-color: #eee !important;
+}
+
+h2.indent {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-right: 8px;
+  float: left;
+  text-align: right;
+  font-family: Roboto;
+  font-weight: 900;
+  line-height: 0.86;
+  color: #b06;
+  width: 50%;
+  margin-left: -16px;
+  text-transform: uppercase;
+  text-overflow: clip;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+p.indent {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.28;
+  text-align: -webkit-left;
+  margin-top: 18px;
+}
+
+.container.incard {
+  max-width: 100% !important;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fancy-button {
+  all: unset;
+  cursor: pointer;
+  font-size: 1.75em;
+  font-weight: 1000;
+  color: white;
+  position: relative;
+  transition: transform 0.2s ease;
+  width: 100px;
+}
+.fancy-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, var(--color-pale-pink), var(--color-pale-pink));
+  transform: scale(0.9);
+  outline: 0px solid var(--color-light-purple);
+  border-radius: 100000px;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.fancy-button span:nth-child(2) {
+  position: relative;
+  padding: 0.5em 1.2em;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  border-radius: 100000px;
+  transition: transform 0.2s ease;
+}
+.fancy-button span:nth-child(2):before, .fancy-button span:nth-child(2):after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: var(--icon-opacity);
+  transform: scale(var(--icon-scale)) rotate(calc(var(--icon-rotation) * -1deg));
+  transition: transform 0.2s ease, opacity 0.2s ease, --icon-rotation 0.4s cubic-bezier(0.02, 1.02, 0.67, 1.06);
+  pointer-events: none;
+  z-index: -1;
+}
+.fancy-button span:nth-child(2):before {
+  width: 2.1em;
+  top: -0.8em;
+  left: -0.8em;
+  background: url(https://assets.codepen.io/64/heart+%286%29+%281%29.png) no-repeat center center/contain;
+  z-index: -1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+}
+.fancy-button span:nth-child(2):after {
+  width: 1.2em;
+  top: 1em;
+  left: 0.5em;
+  background: url(https://assets.codepen.io/64/heart+%285%29+%281%29.png) no-repeat center center/contain;
+  filter: blur(2px) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+}
+.fancy-button span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+.fancy-button span:nth-child(1):before, .fancy-button span:nth-child(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  transform: scale(var(--icon-scale)) rotate(calc(var(--icon-rotation) * -1deg));
+  transition: transform 0.2s ease, opacity 0.2s ease, --icon-rotation 0.4s cubic-bezier(0.02, 1.02, 0.67, 1.06);
+  pointer-events: none;
+}
+.fancy-button span:nth-child(1):before {
+  width: 1.75em;
+  top: -1em;
+  right: 0.5em;
+  background: url(https://assets.codepen.io/64/heart+%283%29+%281%29.png) no-repeat center center/contain;
+  filter: blur(1px) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+}
+.fancy-button span:nth-child(1):after {
+  width: 2em;
+  top: 1em;
+  right: -0.5em;
+  background: url(https://assets.codepen.io/64/heart+%284%29+%281%29.png) no-repeat center center/contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+}
+.fancy-button:hover {
+  --icon-scale: 1;
+  --icon-rotation: 0;
+  --icon-opacity: 1;
+}
+.fancy-button:hover:before {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, var(--color-dark-purple), var(--color-light-purple));
+  box-shadow: 0 4px 22px -8px var(--color-mix);
+}
+.fancy-button:hover > span:nth-child(2) {
+  transform: scale(0.95);
+}
+.fancy-button:hover:active {
+  --icon-scale: 0.8;
+  --icon-rotation: 20;
+  transform: scale(1.05);
+}
+.fancy-button:hover:active:before {
+  box-shadow: 0 2px 12px var(--color-mix);
+}
+.fancy-button:hover:active span:before,
+.fancy-button:hover:active span:after {
+  transition-delay: 0s;
+}
+.fancy-button:hover:active span:nth-child(odd):before,
+.fancy-button:hover:active span:nth-child(even):before {
+  --icon-rotation: -20;
+}
+.fancy-button:hover:active span:nth-child(odd):after,
+.fancy-button:hover:active span:nth-child(even):after {
+  --icon-rotation: 20;
+}
+.fancy-button:hover:active:before {
+  transform: scale(0.95);
+}
+
+.fini {
+  width: 260px;
+}
+
+.accept {
+  width: 190px;
+}
+
+.etre {
+  font-size: 100px;
+}
+
+.home {
+  width: 150px;
+}
+
+.fancy-button.accept.faded {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAER;EACE;EACA;EACA;EAEA;EACA;EACA;EACA;;;AAGF;EACE;IACE;IACA;IACA;IACA;;;AAKJ;AAAA;EAEE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAIF;EACI;EACA;EACA;EACA;EACA;;;AAKJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAKJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EAGA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EAEC;EAKD;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EAEA;EAEA;EACA;;AAGF;EACE;EACA;EACA;EACA;EAEA;EACC;;AAGH;EACE;EACA;EACA;EACA;EAEA;;AAKJ;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EAEA;EAEA;;AAIF;EACE;EACA;EACA;EACA;EAEA;;AAGF;EACE;EACA;EACA;EACA;EAEC;;AAIL;EACE;EACA;EACA;;AAGA;EACE;EACA;EAKA;;AAGF;EACE;;AAGF;EACE;EACA;EAEA;;AAEA;EACE;;AAGF;AAAA;EAEE;;AAGF;AAAA;EAEE;;AAGF;AAAA;EAEE;;AAGF;EACE;;;AAMV;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA%22,%22file%22:%22index.css%22%7D */
