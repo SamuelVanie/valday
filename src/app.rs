@@ -7,7 +7,8 @@ use crate::yes_page::YesPage;
 
 #[derive(Clone, PartialEq, Eq, Routable)]
 pub enum Route {
-    #[at("/")]
+    #[not_found]
+    #[at("/404")]
     Reasons,
     #[at("/ask")]
     Ask,
