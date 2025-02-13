@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Trunk Template</title>
+    <link rel="stylesheet" href="/valday/index-5a3a3bdf399a7c0b.css" integrity="sha384&#x2D;EFlaTbmKACWLh2N09QImXyRBsPLvpiT0m9dUiLbtLWvY9kmeAp3&#x2F;S3c6qzuEHlJl"/>
+  <link rel="modulepreload" href="/valday/trunk-template-aa7a3dbc1c3fee8c.js" crossorigin="anonymous" integrity="sha384-hFWzYVTj4xsACkWcxmGi5GMLKxdaZ8KktqNAp1uagsNQ4hoNRJ5i9HH7XI/+tanK"><link rel="preload" href="/valday/trunk-template-aa7a3dbc1c3fee8c_bg.wasm" crossorigin="anonymous" integrity="sha384-K15ZTISMH5OIxV0bk/AdbN8hqpF9NSEFamK1h87GhcF4w9ZUkfGHcivda/tONT6b" as="fetch" type="application/wasm"></head>
+  <body>
+  
+<script type="module">
+import init, * as bindings from '/valday/trunk-template-aa7a3dbc1c3fee8c.js';
+const wasm = await init('/valday/trunk-template-aa7a3dbc1c3fee8c_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
