@@ -19,6 +19,9 @@ jobs:
           toolchain: stable
           override: true
 
+      - name: Add the wasm target
+        run: rustup target add wasm32-unknown-unknown
+        
       - name: Install Trunk
         run: cargo install trunk
 
