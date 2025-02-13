@@ -12,10 +12,7 @@ pub enum Route {
     #[at("/ask")]
     Ask,
     #[at("/yes")]
-    Yes,
-    #[not_found]
-    #[at("/404")]
-    NotFound,
+    Yes
 }
 
 fn switch(routes: Route) -> Html {
@@ -23,7 +20,6 @@ fn switch(routes: Route) -> Html {
         Route::Reasons => html! { <ReasonsPage /> },
         Route::Ask => html! { <AskPage /> },
         Route::Yes => html! { <YesPage /> },
-        Route::NotFound => html! { <h1>{" Evite de trop bouger "}</h1> },
     }
 }
 
