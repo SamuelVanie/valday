@@ -15,10 +15,7 @@ pub fn reasons_page() -> Html {
         "Naturelle|Tu es tellement naturelle et authentique, tu ne te caches pas derrière un masque et tu te montres telle que tu es.".to_string(),
         "Gentille|Tu prends de mes nouvelles, tu me soutiens et tu m'aides dans ce que je fais".to_string(),
         "Ouverte d'esprit|Ton ouverture d'esprit me permet de discuter de tout avec toi, sans jugement ni tabou.".to_string(),
-        "Cultivée|J'aime discuter avec toi de sujets variés, tu as toujours quelque chose d'intéressant à dire.".to_string(),
-        "Resilieente|Tu as affronter tellement de choses, et tu es toujours là avec le sourire.".to_string(),
-        
-        "Élégante|Ton élégance naturelle me séduit, tu as une allure raffinée et sophistiquée.".to_string(),
+        "Élégante|Ton élégance naturelle me séduit, ton allure est rafinee, tu mets rarement du maquillage.".to_string(),
         "Équilibrée|Tu as un bon équilibre dans ta vie, tu sais comment concilier travail, loisirs et relations.".to_string(),
         "Joyeuse|Ta joie de vivre est communicative, tu sais comment illuminer mes journées.".to_string(),
         "Calme|Tu as un effet apaisant sur moi, tu sais comment me calmer.".to_string(),
