@@ -12,7 +12,7 @@ pub fn yes_page() -> Html {
         <p class="etre">{ "Est-ce qu'il doit y avoir une raison d'aimer?" }</p>
         <p class="etre">{ "Je t'aime pour tout et pour rien" }</p>
         <p class="etre">{ "Je t'aime parce que tu es toi" }</p>
-        <p class="etre">{ "Si t'es là c'est que c'est un oui, à confirmer par message wha au +225 0769237858" }</p>
+        <p class="etre">{ "Si t'es là c'est que c'est un oui, à confirmer par message wha" }</p>
         <Link<Route> to={Route::Reasons}>
         <button class="fancy-button home">
                 <span></span>
